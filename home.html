@@ -1,0 +1,291 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BorendroDak Health & Welfare Foundation</title>
+  <meta name="description" content="BorendroDak Health & Welfare Foundation — a community-first foundation supporting health, welfare, emergency medicine, blood support, and patient coordination." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- Accessibility: allow keyboard users to jump to content -->
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="home.html" aria-label="BorendroDak Foundation Home">
+          <span class="brand-mark" aria-hidden="true">
+            <img src="logo.png" alt="" />
+          </span>
+          <span class="brand-name">
+            <strong data-i18n="brand.title">BorendroDak Foundation</strong>
+            <span data-i18n="brand.subtitle">Health & Welfare • Rajshahi</span>
+          </span>
+        </a>
+
+        <div class="nav-links" aria-label="Site">
+          <a href="home.html" data-i18n="nav.home">Home</a>
+          <a href="about.html" data-i18n="nav.about">About</a>
+          <a href="programs.html" data-i18n="nav.programs">Programs</a>
+          <a href="activities.html" data-i18n="nav.activities">Activities</a>
+          <a href="volunteer.html" data-i18n="nav.volunteer">Volunteer</a>
+          <a href="donate.html" data-i18n="nav.donate">Donate</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </div>
+
+        <div class="nav-cta">
+          <div class="lang-switch" aria-label="Language" data-i18n-aria="lang.label">
+            <button class="lang-btn" type="button" data-lang-btn="en" aria-pressed="true">EN</button>
+            <button class="lang-btn" type="button" data-lang-btn="bn" aria-pressed="false">বাংলা</button>
+          </div>
+          <a class="btn btn-outline" href="volunteer.html" data-i18n="cta.volunteer">Join as Volunteer</a>
+          <a class="btn btn-primary" href="donate.html" data-i18n="cta.donate">Donate</a>
+          <button class="hamburger" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobilePanel" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Mobile menu panel -->
+    <div class="mobile-panel" id="mobilePanel" data-mobile-panel data-open="false">
+      <div class="container">
+        <div class="lang-switch" aria-label="Language" data-i18n-aria="lang.label" style="margin: 6px 0 12px;">
+          <button class="lang-btn" type="button" data-lang-btn="en" aria-pressed="true">EN</button>
+          <button class="lang-btn" type="button" data-lang-btn="bn" aria-pressed="false">বাংলা</button>
+        </div>
+        <a href="home.html"><span data-i18n="nav.home">Home</span> <span aria-hidden="true">›</span></a>
+        <a href="about.html"><span data-i18n="nav.about">About</span> <span aria-hidden="true">›</span></a>
+        <a href="programs.html"><span data-i18n="nav.programs">Programs</span> <span aria-hidden="true">›</span></a>
+        <a href="activities.html"><span data-i18n="nav.activities">Activities</span> <span aria-hidden="true">›</span></a>
+        <a href="volunteer.html"><span data-i18n="nav.volunteer">Volunteer</span> <span aria-hidden="true">›</span></a>
+        <a href="donate.html"><span data-i18n="nav.donate">Donate</span> <span aria-hidden="true">›</span></a>
+        <a href="contact.html"><span data-i18n="nav.contact">Contact</span> <span aria-hidden="true">›</span></a>
+        <div class="mobile-actions">
+          <a class="btn btn-outline" href="tel:+8801353988955" data-i18n="m.call">Call</a>
+          <a class="btn btn-primary" href="donate.html" data-i18n="m.donate">Donate</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- HOME: Hero (trust-first, donation-ready) -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="reveal" data-reveal>
+          <span class="eyebrow"><i aria-hidden="true"></i> <span data-i18n="home.eyebrow">Community-first support</span></span>
+          <h1 data-i18n="home.h1">Trusted health & welfare support—when families need it most.</h1>
+          <p data-i18n="home.lead">
+            BorendroDak Health & Welfare Foundation helps patients and families with coordination for
+            doctor appointments, emergency medicine, blood support, and welfare assistance—through one simple hotline.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="donate.html" data-i18n="home.btn.donate">Donate now</a>
+            <a class="btn btn-outline" href="programs.html" data-i18n="home.btn.programs">Explore programs</a>
+            <a class="btn btn-ghost" href="contact.html" data-i18n="home.btn.contact">Get help / Contact</a>
+          </div>
+          <div class="trust-row" aria-label="Trust indicators">
+            <span class="trust-pill"><b data-i18n="home.trust.hotline">Hotline:</b> 01353-988955</span>
+            <span class="trust-pill"><b data-i18n="home.trust.location">Location:</b> <span data-i18n="home.trust.locationVal">Rajshahi</span></span>
+            <span class="trust-pill"><b data-i18n="home.trust.response">Response:</b> <span data-i18n="home.trust.responseVal">Fast coordination</span></span>
+          </div>
+        </div>
+
+        <aside class="hero-card reveal" data-reveal aria-label="Emergency support card">
+          <div class="top">
+            <h3 data-i18n="home.emergency.title">Emergency support</h3>
+            <p data-i18n="home.emergency.subtitle">One number for hotline + WhatsApp coordination.</p>
+          </div>
+
+          <div class="hotline">
+            <div class="icon" aria-hidden="true">📞</div>
+            <div class="meta">
+              <small data-i18n="home.emergency.label">Hotline / WhatsApp</small>
+              <strong>01353-988955</strong>
+            </div>
+          </div>
+
+          <div class="hotline-actions">
+            <a class="btn btn-primary mini" href="tel:+8801353988955" data-i18n="home.emergency.call">Call now</a>
+            <a class="btn btn-outline mini" href="https://wa.me/8801353988955" target="_blank" rel="noopener noreferrer" data-i18n="home.emergency.wa">WhatsApp</a>
+          </div>
+
+          <ul class="list" aria-label="Quick services">
+            <li>
+              <div class="b" aria-hidden="true">🩺</div>
+              <div class="t"><b data-i18n="home.qs.title1">Doctor appointment</b><span data-i18n="home.qs.desc1">Specialist & general guidance</span></div>
+            </li>
+            <li>
+              <div class="b" aria-hidden="true">💊</div>
+              <div class="t"><b data-i18n="home.qs.title2">Emergency medicine</b><span data-i18n="home.qs.desc2">Support for hard-to-find medicines</span></div>
+            </li>
+            <li>
+              <div class="b" aria-hidden="true">🩸</div>
+              <div class="t"><b data-i18n="home.qs.title3">Blood support</b><span data-i18n="home.qs.desc3">Donor & blood bank coordination</span></div>
+            </li>
+            <li>
+              <div class="b" aria-hidden="true">🚑</div>
+              <div class="t"><b data-i18n="home.qs.title4">Emergency transport</b><span data-i18n="home.qs.desc4">Patient transport coordination</span></div>
+            </li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <!-- Impact cards -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="kicker reveal" data-reveal>
+          <div>
+            <h2 data-i18n="home.impact.h2">Our impact areas</h2>
+            <p data-i18n="home.impact.p">Clear programs help donors understand where support goes—health, welfare, and emergency response.</p>
+          </div>
+          <a class="btn btn-outline" href="programs.html" data-i18n="home.impact.btn">View all programs</a>
+        </div>
+
+        <div class="cards">
+          <article class="card reveal" data-reveal>
+            <div class="icon" aria-hidden="true">🩺</div>
+            <h3 data-i18n="home.impact.c1.h3">Medical support</h3>
+            <p data-i18n="home.impact.c1.p">Appointment coordination, telemedicine support, and guidance to reach the right care faster.</p>
+            <div class="meta" data-i18n="home.impact.c1.meta">Focus: patient navigation</div>
+          </article>
+          <article class="card reveal" data-reveal>
+            <div class="icon" aria-hidden="true">🤝</div>
+            <h3 data-i18n="home.impact.c2.h3">Welfare assistance</h3>
+            <p data-i18n="home.impact.c2.p">Community welfare support for families in crisis—coordination and follow-up, with dignity.</p>
+            <div class="meta" data-i18n="home.impact.c2.meta">Focus: family support</div>
+          </article>
+          <article class="card reveal" data-reveal>
+            <div class="icon" aria-hidden="true">🩸</div>
+            <h3 data-i18n="home.impact.c3.h3">Blood donation network</h3>
+            <p data-i18n="home.impact.c3.p">Connecting donors, blood banks, and urgent patient needs—especially during emergency requests.</p>
+            <div class="meta" data-i18n="home.impact.c3.meta">Focus: emergency response</div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Statistics -->
+    <section class="section section--soft">
+      <div class="container">
+        <div class="kicker reveal" data-reveal>
+          <div>
+            <h2 data-i18n="home.stats.h2">Transparency & progress</h2>
+            <p data-i18n="home.stats.p">Numbers help build trust. These can be updated anytime as the foundation grows.</p>
+          </div>
+        </div>
+
+        <div class="stats">
+          <div class="stat reveal" data-reveal><b>24/7</b><span data-i18n="home.stats.s1">Coordination mindset</span></div>
+          <div class="stat reveal" data-reveal><b>6+</b><span data-i18n="home.stats.s2">Core service lines</span></div>
+          <div class="stat reveal" data-reveal><b>1</b><span data-i18n="home.stats.s3">Hotline for support</span></div>
+          <div class="stat reveal" data-reveal><b data-i18n="home.trust.locationVal">Rajshahi</b><span data-i18n="home.stats.s4">Community base</span></div>
+        </div>
+        <p class="note reveal" data-reveal>
+          <span data-i18n="home.stats.note">Note: Replace the stats with real counts (patients supported, donors connected, transports coordinated) for maximum credibility.</span>
+        </p>
+      </div>
+    </section>
+
+    <!-- Recent activities -->
+    <section class="section" id="activities">
+      <div class="container">
+        <div class="kicker reveal" data-reveal>
+          <div>
+            <h2 data-i18n="home.recent.h2">Recent activities</h2>
+            <p data-i18n="home.recent.p">Updates show ongoing work and build confidence for donors and volunteers.</p>
+          </div>
+          <a class="btn btn-outline" href="activities.html" data-i18n="home.recent.btn">Go to activities</a>
+        </div>
+
+        <div class="activity-grid">
+          <article class="post reveal" data-reveal>
+            <div class="thumb" aria-hidden="true"></div>
+            <div class="body">
+              <span class="tag" data-i18n="home.recent.tag1">Health</span>
+              <h3 data-i18n="home.recent.h3_1">Patient appointment coordination drive</h3>
+              <p data-i18n="home.recent.p_1">Helping patients reach the right specialist and reduce delays through hotline guidance.</p>
+            </div>
+            <div class="foot"><span data-i18n="home.recent.foot1a">Rajshahi</span><span data-i18n="home.recent.foot1b">Updated recently</span></div>
+          </article>
+          <article class="post reveal" data-reveal>
+            <div class="thumb" aria-hidden="true"></div>
+            <div class="body">
+              <span class="tag" data-i18n="home.recent.tag2">Blood</span>
+              <h3 data-i18n="home.recent.h3_2">Emergency blood donor call</h3>
+              <p data-i18n="home.recent.p_2">Coordinating donors and blood banks quickly when urgent requests come in.</p>
+            </div>
+            <div class="foot"><span data-i18n="home.recent.foot2a">Coordination</span><span data-i18n="home.recent.foot2b">Ongoing</span></div>
+          </article>
+          <article class="post reveal" data-reveal>
+            <div class="thumb" aria-hidden="true"></div>
+            <div class="body">
+              <span class="tag" data-i18n="home.recent.tag3">Welfare</span>
+              <h3 data-i18n="home.recent.h3_3">Family welfare follow-up</h3>
+              <p data-i18n="home.recent.p_3">Guidance and support to families during hardship, with privacy and dignity.</p>
+            </div>
+            <div class="foot"><span data-i18n="home.recent.foot3a">Community</span><span data-i18n="home.recent.foot3b">Monthly</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Donation CTA -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cta reveal" data-reveal>
+          <h3 data-i18n="home.dcta.h3">Your donation makes support possible</h3>
+          <p data-i18n="home.dcta.p">
+            Donations help us respond faster and assist more families. We prioritize transparency and responsible coordination.
+            Visit the Donate page for bKash, Nagad, and Bank details.
+          </p>
+          <div class="row">
+            <a class="btn btn-primary" href="donate.html" data-i18n="home.dcta.b1">Donate</a>
+            <a class="btn btn-outline" href="volunteer.html" data-i18n="home.dcta.b2">Become a volunteer</a>
+            <a class="btn btn-outline" href="contact.html" data-i18n="home.dcta.b3">Need help?</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4 data-i18n="footer.title">BorendroDak Health & Welfare Foundation</h4>
+          <p class="muted" data-i18n="footer.about">A community-first foundation supporting health coordination, welfare assistance, and emergency response in Rajshahi.</p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.contact">Contact</h4>
+          <p><a href="tel:+8801353988955">Hotline: +880 1353-988955</a></p>
+          <p><a href="mailto:help@borendrodak.org">help@borendrodak.org</a></p>
+          <p class="muted">Court Station, Rajpara, Rajshahi</p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.quick">Quick links</h4>
+          <p><a href="donate.html" data-i18n="footer.link.donate">Donate</a></p>
+          <p><a href="volunteer.html" data-i18n="footer.link.volunteer">Volunteer</a></p>
+          <p><a href="activities.html" data-i18n="footer.link.activities">Activities</a></p>
+        </div>
+      </div>
+      <div class="fine">
+        <span>© <span id="year"></span> BorendroDak Foundation</span>
+        <span class="muted" data-i18n="footer.fine">Built with care • Minimal & trustworthy design</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>
+    // Keep the footer year current.
+    document.getElementById("year").textContent = String(new Date().getFullYear());
+  </script>
+</body>
+</html>

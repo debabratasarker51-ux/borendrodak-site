@@ -228,7 +228,7 @@
       "contact.addr.note": "(Add a Google Map embed later if needed.)"
     },
     bn: {
-      "brand.title": "বরেন্দ্রডাক ফাউন্ডেশন",
+      "brand.title": "বরেন্দ্রডাক স্বাস্থ্য ও সমাজকল্যাণ ফাউন্ডেশন",
       "brand.subtitle": "স্বাস্থ্য ও সমাজকল্যাণ • রাজশাহী",
       "nav.home": "হোম",
       "nav.about": "আমাদের সম্পর্কে",
@@ -242,7 +242,7 @@
       "m.call": "কল করুন",
       "m.donate": "ডোনেট",
       "home.eyebrow": "কমিউনিটি-ফার্স্ট সাপোর্ট",
-      "home.h1": "বিশ্বস্ত স্বাস্থ্য ও সমাজকল্যাণ সহায়তা—পরিবারের প্রয়োজনের সময় পাশে।",
+      "home.h1": "স্বাস্থ্য ও সমাজকল্যাণ সহায়তা—পরিবারের প্রয়োজনের সময় পাশে।",
       "home.lead":
         "বরেন্দ্রডাক স্বাস্থ্য ও সমাজকল্যাণ ফাউন্ডেশন—ডাক্তার অ্যাপয়েন্টমেন্ট, জরুরি ঔষধ, রক্ত সহায়তা এবং কল্যাণমূলক সাপোর্ট—সবকিছুর সমন্বয় করে একটিমাত্র হটলাইনে।",
       "home.btn.donate": "ডোনেট করুন",
@@ -486,18 +486,22 @@
   }
 
   function syncLangButtons(lang) {
-    var btnEn = document.querySelector("[data-lang-btn='en']");
-    var btnBn = document.querySelector("[data-lang-btn='bn']");
-    if (btnEn) btnEn.setAttribute("aria-pressed", lang === "en" ? "true" : "false");
-    if (btnBn) btnBn.setAttribute("aria-pressed", lang === "bn" ? "true" : "false");
+    var btns = document.querySelectorAll("[data-lang-btn]");
+    btns.forEach(function (b) {
+      var which = b.getAttribute("data-lang-btn");
+      if (which !== "en" && which !== "bn") return;
+      b.setAttribute("aria-pressed", lang === which ? "true" : "false");
+    });
   }
 
   // Wire language buttons (if present on the page)
   (function initLang() {
-    var btnEn = document.querySelector("[data-lang-btn='en']");
-    var btnBn = document.querySelector("[data-lang-btn='bn']");
-    if (btnEn) btnEn.addEventListener("click", function () { setLang("en"); });
-    if (btnBn) btnBn.addEventListener("click", function () { setLang("bn"); });
+    var btns = document.querySelectorAll("[data-lang-btn]");
+    btns.forEach(function (btn) {
+      var which = btn.getAttribute("data-lang-btn");
+      if (which !== "en" && which !== "bn") return;
+      btn.addEventListener("click", function () { setLang(which); });
+    });
     var lang = getLang();
     applyI18n(lang);
     syncLangButtons(lang);
@@ -540,7 +544,7 @@
     var links = document.querySelectorAll(".nav-links a, [data-mobile-panel] a");
     if (!links.length) return;
 
-    var path = (window.location.pathname || "").split("/").pop() || "index.html";
+    var path = (window.location.pathname || "").split("/").pop() || "home.html";
     links.forEach(function (a) {
       var href = a.getAttribute("href") || "";
       var file = href.split("#")[0].split("/").pop();
@@ -550,9 +554,11 @@
   })();
 
   // ---------- Optional: section highlight on Home (anchors) ----------
-  // On index.html only, keep top-nav aware of the visible section.
+  // On home.html only, keep top-nav aware of the visible section.
   (function sectionSpy() {
-    var isHome = (window.location.pathname || "").endsWith("index.html") || (window.location.pathname || "").endsWith("/");
+    var p = (window.location.pathname || "");
+    var file = p.split("/").pop();
+    var isHome = file === "" || file === "home.html" || p.endsWith("/");
     if (!isHome) return;
 
     var header = document.querySelector(".site-header");
