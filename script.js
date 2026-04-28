@@ -109,6 +109,7 @@
       "footer.link.donate": "Donate",
       "footer.link.volunteer": "Volunteer",
       "footer.link.activities": "Activities",
+      "footer.follow": "Follow us",
       "footer.fine": "Built with care • Minimal & trustworthy design",
 
       "crumb.home": "Home",
@@ -323,6 +324,7 @@
       "footer.link.donate": "ডোনেট",
       "footer.link.volunteer": "স্বেচ্ছাসেবক",
       "footer.link.activities": "কার্যক্রম",
+      "footer.follow": "আমাদের ফলো করুন",
       "footer.fine": "যত্ন নিয়ে তৈরি • মিনিমাল ও বিশ্বাসযোগ্য ডিজাইন",
 
       "crumb.home": "হোম",
