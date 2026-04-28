@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Donate • BorendroDak Foundation</title>
+  <meta name="description" content="Donate to BorendroDak Health & Welfare Foundation via bKash, Nagad, or Bank." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Bengali:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* Donate page-specific blocks (kept small, still deploy-ready). */
+    .pay-grid{display:grid; grid-template-columns:repeat(3, 1fr); gap:18px}
+    .pay-card{background:#fff; border:1px solid rgba(15,23,42,.08); border-radius:22px; box-shadow:var(--shadow-lg); overflow:hidden}
+    .pay-card .head{padding:18px 18px 14px; border-bottom:1px solid #f1f5f9; display:flex; gap:12px; align-items:center}
+    .pay-card .head .badge{width:48px; height:48px; border-radius:16px; display:grid; place-items:center; font-weight:800; color:#fff; background:var(--primary)}
+    .pay-card .head h3{margin:0; font-size:16px; letter-spacing:-.02em}
+    .pay-card .body{padding:16px 18px 18px}
+    .pay-line{display:flex; justify-content:space-between; gap:12px; padding:10px 0; border-bottom:1px dashed #e2e8f0; font-size:14px}
+    .pay-line:last-child{border-bottom:none}
+    .qr{
+      margin-top:14px;
+      border-radius:18px;
+      border:1px solid rgba(148,163,184,.45);
+      background:linear-gradient(145deg, rgba(22,163,74,.08), rgba(2,6,23,.03));
+      padding:16px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:14px;
+    }
+    .qr .box{width:96px; height:96px; border-radius:16px; background:#fff; border:1px solid rgba(148,163,184,.45); display:grid; place-items:center; color:var(--subtle); font-weight:800}
+    .tip{margin-top:12px; color:var(--muted); font-size:13px}
+    @media (max-width: 980px){.pay-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to content</a>
+
+  <header class="site-header">
+    <div class="container">
+      <nav class="nav" aria-label="Primary">
+        <a class="brand" href="index.html" aria-label="BorendroDak Foundation Home">
+          <span class="brand-mark" aria-hidden="true"><img src="logo.png" alt="" /></span>
+          <span class="brand-name">
+            <strong data-i18n="brand.title">BorendroDak Foundation</strong>
+            <span data-i18n="brand.subtitle">Health & Welfare • Rajshahi</span>
+          </span>
+        </a>
+        <div class="nav-links" aria-label="Site">
+          <a href="index.html" data-i18n="nav.home">Home</a>
+          <a href="about.html" data-i18n="nav.about">About</a>
+          <a href="programs.html" data-i18n="nav.programs">Programs</a>
+          <a href="activities.html" data-i18n="nav.activities">Activities</a>
+          <a href="volunteer.html" data-i18n="nav.volunteer">Volunteer</a>
+          <a href="donate.html" data-i18n="nav.donate">Donate</a>
+          <a href="contact.html" data-i18n="nav.contact">Contact</a>
+        </div>
+        <div class="nav-cta">
+          <div class="lang-switch" aria-label="Language" data-i18n-aria="lang.label">
+            <button class="lang-btn" type="button" data-lang-btn="en" aria-pressed="true">EN</button>
+            <button class="lang-btn" type="button" data-lang-btn="bn" aria-pressed="false">বাংলা</button>
+          </div>
+          <a class="btn btn-outline" href="volunteer.html" data-i18n="cta.volunteer">Join as Volunteer</a>
+          <a class="btn btn-primary" href="donate.html" data-i18n="cta.donate">Donate</a>
+          <button class="hamburger" type="button" data-nav-toggle aria-expanded="false" aria-controls="mobilePanel" aria-label="Open menu">
+            <span></span><span></span><span></span>
+          </button>
+        </div>
+      </nav>
+    </div>
+    <div class="mobile-panel" id="mobilePanel" data-mobile-panel data-open="false">
+      <div class="container">
+        <div class="lang-switch" aria-label="Language" data-i18n-aria="lang.label" style="margin: 6px 0 12px;">
+          <button class="lang-btn" type="button" data-lang-btn="en" aria-pressed="true">EN</button>
+          <button class="lang-btn" type="button" data-lang-btn="bn" aria-pressed="false">বাংলা</button>
+        </div>
+        <a href="index.html"><span data-i18n="nav.home">Home</span> <span aria-hidden="true">›</span></a>
+        <a href="about.html"><span data-i18n="nav.about">About</span> <span aria-hidden="true">›</span></a>
+        <a href="programs.html"><span data-i18n="nav.programs">Programs</span> <span aria-hidden="true">›</span></a>
+        <a href="activities.html"><span data-i18n="nav.activities">Activities</span> <span aria-hidden="true">›</span></a>
+        <a href="volunteer.html"><span data-i18n="nav.volunteer">Volunteer</span> <span aria-hidden="true">›</span></a>
+        <a href="donate.html"><span data-i18n="nav.donate">Donate</span> <span aria-hidden="true">›</span></a>
+        <a href="contact.html"><span data-i18n="nav.contact">Contact</span> <span aria-hidden="true">›</span></a>
+        <div class="mobile-actions">
+          <a class="btn btn-outline" href="tel:+8801353988955">Call</a>
+          <a class="btn btn-primary" href="donate.html">Donate</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="page-head">
+      <div class="container">
+        <div class="crumbs"><a href="index.html" data-i18n="crumb.home">Home</a> <span aria-hidden="true">/</span> <span data-i18n="nav.donate">Donate</span></div>
+        <h1 data-i18n="donate.h1">Donate with confidence</h1>
+        <p class="muted" data-i18n="donate.lead">Your support helps keep emergency coordination active and expands welfare assistance for families.</p>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="cta reveal" data-reveal style="margin-bottom:18px;">
+          <h3 data-i18n="donate.cta.h3">Thank you for supporting BorendroDak</h3>
+          <p data-i18n="donate.cta.p">Choose a method below. After donating, please send the transaction ID to our WhatsApp so we can confirm and record it.</p>
+          <div class="row">
+            <a class="btn btn-primary" href="https://wa.me/8801353988955" target="_blank" rel="noopener noreferrer" data-i18n="donate.cta.btn1">Send receipt on WhatsApp</a>
+            <a class="btn btn-outline" href="contact.html" data-i18n="donate.cta.btn2">Need help?</a>
+          </div>
+        </div>
+
+        <div class="pay-grid">
+          <section class="pay-card reveal" data-reveal aria-label="bKash donation details">
+            <div class="head">
+              <div class="badge" aria-hidden="true">bK</div>
+              <div>
+                <h3>bKash</h3>
+                <div class="muted" style="font-size:12px; font-weight:600;" data-i18n="donate.bk.sub">Send Money / Merchant</div>
+              </div>
+            </div>
+            <div class="body">
+              <div class="pay-line"><span data-i18n="donate.f.number">Number</span><b>01XXXXXXXXX</b></div>
+              <div class="pay-line"><span data-i18n="donate.f.type">Type</span><b data-i18n="donate.v.type1">Personal / Merchant</b></div>
+              <div class="pay-line"><span data-i18n="donate.f.ref">Reference</span><b data-i18n="donate.v.refDonation">Donation</b></div>
+              <div class="qr">
+                <div>
+                  <b data-i18n="donate.qr.title">QR Code</b>
+                  <div class="muted" style="font-size:12px;" data-i18n="donate.qr.help">Place a QR image here later.</div>
+                </div>
+                <div class="box">QR</div>
+              </div>
+              <div class="tip" data-i18n="donate.tip1">Tip: Replace the placeholder number and add your real QR image for maximum trust.</div>
+            </div>
+          </section>
+
+          <section class="pay-card reveal" data-reveal aria-label="Nagad donation details">
+            <div class="head">
+              <div class="badge" aria-hidden="true" style="background:#0f172a;">NG</div>
+              <div>
+                <h3>Nagad</h3>
+                <div class="muted" style="font-size:12px; font-weight:600;" data-i18n="donate.ng.sub">Send Money</div>
+              </div>
+            </div>
+            <div class="body">
+              <div class="pay-line"><span data-i18n="donate.f.number">Number</span><b>01XXXXXXXXX</b></div>
+              <div class="pay-line"><span data-i18n="donate.f.ref">Reference</span><b data-i18n="donate.v.refDonation">Donation</b></div>
+              <div class="pay-line"><span data-i18n="donate.f.note">Note</span><b data-i18n="donate.v.noteName">Write your name</b></div>
+              <div class="qr">
+                <div>
+                  <b data-i18n="donate.qr.title">QR Code</b>
+                  <div class="muted" style="font-size:12px;" data-i18n="donate.qr.help2">QR placeholder.</div>
+                </div>
+                <div class="box">QR</div>
+              </div>
+              <div class="tip" data-i18n="donate.tip2">After sending, WhatsApp us the transaction ID for confirmation.</div>
+            </div>
+          </section>
+
+          <section class="pay-card reveal" data-reveal aria-label="Bank donation details">
+            <div class="head">
+              <div class="badge" aria-hidden="true" style="background:var(--primary-600);">BK</div>
+              <div>
+                <h3>Bank</h3>
+                <div class="muted" style="font-size:12px; font-weight:600;" data-i18n="donate.bank.sub">Account transfer</div>
+              </div>
+            </div>
+            <div class="body">
+              <div class="pay-line"><span data-i18n="donate.f.accName">Account name</span><b data-i18n="brand.title">BorendroDak Foundation</b></div>
+              <div class="pay-line"><span data-i18n="donate.f.accNo">Account no.</span><b>XXXXXXXXXXXX</b></div>
+              <div class="pay-line"><span data-i18n="donate.f.bank">Bank</span><b>Bank Name</b></div>
+              <div class="pay-line"><span data-i18n="donate.f.branch">Branch</span><b data-i18n="home.trust.locationVal">Rajshahi</b></div>
+              <div class="qr">
+                <div>
+                  <b data-i18n="donate.qr.bankTitle">Bank QR</b>
+                  <div class="muted" style="font-size:12px;" data-i18n="donate.qr.bankHelp">Optional QR placeholder.</div>
+                </div>
+                <div class="box">QR</div>
+              </div>
+              <div class="tip" data-i18n="donate.tip3">Replace bank details with real info. Add a receipt email/phone to increase credibility.</div>
+            </div>
+          </section>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <h4 data-i18n="footer.title">BorendroDak Health & Welfare Foundation</h4>
+          <p class="muted" data-i18n="donate.foot.p">Thank you for supporting our health & welfare work.</p>
+        </div>
+        <div>
+          <h4 data-i18n="donate.foot.h">Donation help</h4>
+          <p><a href="https://wa.me/8801353988955" target="_blank" rel="noopener noreferrer">WhatsApp: +880 1353-988955</a></p>
+          <p><a href="tel:+8801353988955">Call: +880 1353-988955</a></p>
+          <p class="muted">Court Station, Rajpara, Rajshahi</p>
+        </div>
+        <div>
+          <h4 data-i18n="footer.quick">Quick links</h4>
+          <p><a href="programs.html" data-i18n="nav.programs">Programs</a></p>
+          <p><a href="activities.html" data-i18n="footer.link.activities">Activities</a></p>
+          <p><a href="contact.html" data-i18n="nav.contact">Contact</a></p>
+        </div>
+      </div>
+      <div class="fine">
+        <span>© <span id="year"></span> BorendroDak Foundation</span>
+        <span class="muted" data-i18n="footer.fine">Built with care • Minimal & trustworthy design</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script>document.getElementById("year").textContent = String(new Date().getFullYear());</script>
+</body>
+</html>
+
